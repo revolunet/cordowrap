@@ -6,9 +6,8 @@ Object.defineProperty(exports, '__esModule', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _CordoWrap = require('./CordoWrap');
+var _find2 = require('./find');
 
-var _CordoWrap2 = _interopRequireDefault(_CordoWrap);
+var _find3 = _interopRequireDefault(_find2);
 
-exports['default'] = _CordoWrap2['default'];
-module.exports = exports['default'];
+exports.find = _find3['default'];
