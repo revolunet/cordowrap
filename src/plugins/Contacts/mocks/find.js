@@ -1,3 +1,5 @@
 
 
-module.exports = [{"name":"Tony"}, {"name":"Sylvie"}];
+export default function() {
+    return [{"name":"Tony"}, {"name":"Sylvie"}];
+}

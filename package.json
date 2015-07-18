@@ -1,9 +1,9 @@
 {
-  "name": "node-babel-boilerplate",
-  "version": "0.1.1",
-  "description": "Lightweight node+babel+tape boilerplate",
+  "name": "cordowrap",
+  "version": "0.0.1",
+  "description": "Promise-based Cordova APIs with mocks support",
   "license": "MIT",
-  "repository": "revolunet/node-babel-boilerplate",
+  "repository": "revolunet/cordowrap",
   "author": {
     "name": "Julien Bouquillon",
     "email": "julien@bouquillon.com",
@@ -21,10 +21,10 @@
   },
   "main": "dist/index.js",
   "keywords": [
-    "node",
-    "babel",
-    "test",
-    "tape"
+    "cordova",
+    "phonegap",
+    "api",
+    "promise"
   ],
   "dependencies": {},
   "devDependencies": {

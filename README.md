@@ -1,17 +1,15 @@
-# node-babel-boilerplate
+# cordowrap
 
-![npm](https://img.shields.io/npm/v/node-babel-boilerplate.svg) ![license](https://img.shields.io/npm/l/node-babel-boilerplate.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/node-babel-boilerplate.svg) ![Circle CI build status](https://circleci.com/gh/revolunet/node-babel-boilerplate.svg?style=svg)
+![npm](https://img.shields.io/npm/v/cordowrap.svg) ![license](https://img.shields.io/npm/l/cordowrap.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/cordowrap.svg) ![Circle CI build status](https://circleci.com/gh/revolunet/cordowrap.svg?style=svg)
 
-Lightweight node+babel+tape boilerplate
+![nodei.co](https://nodei.co/npm/cordowrap.png?downloads=true&downloadRank=true&stars=true)
 
-![nodei.co](https://nodei.co/npm/node-babel-boilerplate.png?downloads=true&downloadRank=true&stars=true)
+Promise-based Cordova APIs with mocks support
 
-## Features
 
- - [babel](http://babeljs.io) for ES6/ES7
- - compile to ES5 in `/dist`
- - [tape](https://github.com/substack/tape) unit testing with [zuul runner](https://github.com/defunctzombie/zuul)
- - use [node-readme](http://github.com/revolunet/node-readme)
+
+
+
 
 ## QuickStart
 
@@ -31,6 +29,7 @@ Edit `package.json` and the `LICENSE`, then run `npm run readme` to update your 
  - **npm run test** : `find ./spec -iname '*.spec.js' -exec ./node_modules/.bin/babel-node {} \; | ./node_modules/.bin/tap-spec`
  - **npm run zuul** : `./node_modules/zuul/bin/zuul -- spec/**/*.spec.js`
  - **npm run build** : `babel -d ./dist ./src`
+ - **npm run watch** : `babel --watch -d ./dist ./src`
 
 ## Dependencies
 
