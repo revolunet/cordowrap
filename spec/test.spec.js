@@ -1,7 +1,7 @@
 'use strict';
 
 let test = require('tape');
-let CordoWrap = require('../src');
+let CordoWrap = require('../src/CordoWrap');
 
 let cordoWrap = () => new CordoWrap();
 

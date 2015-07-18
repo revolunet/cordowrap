@@ -10,5 +10,5 @@ var _CordoWrap = require('./CordoWrap');
 
 var _CordoWrap2 = _interopRequireDefault(_CordoWrap);
 
-exports['default'] = _CordoWrap2['default'];
+exports['default'] = new _CordoWrap2['default']();
 module.exports = exports['default'];

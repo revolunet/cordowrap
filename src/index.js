@@ -1,3 +1,5 @@
 
 
-export default from './CordoWrap';
+import CordoWrap from './CordoWrap';
+
+export default new CordoWrap();

@@ -2,30 +2,58 @@
 
 ![npm](https://img.shields.io/npm/v/cordowrap.svg) ![license](https://img.shields.io/npm/l/cordowrap.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/cordowrap.svg) ![Circle CI build status](https://circleci.com/gh/revolunet/cordowrap.svg?style=svg)
 
-![nodei.co](https://nodei.co/npm/cordowrap.png?downloads=true&downloadRank=true&stars=true)
-
 Promise-based Cordova APIs with mocks support
 
+![nodei.co](https://nodei.co/npm/cordowrap.png?downloads=true&downloadRank=true&stars=true)
+
+Wraps the Cordova plugins APIs into a **promise-based API**.
+
+Built-in mocks support, fake Cordova APIs with your self-crafted data or our defaults.
 
 
 
+## Install
 
+`npm i --save cordowrap`
 
-## QuickStart
+## Usage
 
-Create a new a folder then
+```js
+var cordowrap = require('cordowrap');
 
-```sh
-curl -fsSL https://github.com/revolunet/node-babel-boilerplate/archive/master.tar.gz | tar -xz --strip-components=1 node-babel-boilerplate-master
-npm i
-git init
+cordowrap.plugins.Contacts.find({
+    text: 'John'
+}).then(function(results) {
+    console.log('results', results);
+}).catch(function(err) {
+    console.log('cannot access the Contacts API')
+    throw err;
+})
 ```
 
-Edit `package.json` and the `LICENSE`, then run `npm run readme` to update your README.
+### Use default mocks
+
+Fake data will be returned instead of real API calls
+
+`cordowrap.useDefaultMocks()`
+
+or, for custom data :
+
+```js
+var mocks = {
+    Contacts: {
+        find: function() {
+            return [{name: 'Sofia'}, {name: 'Jessy'}]
+        }
+    }
+};
+
+cordowrap.setMocks(mocks)
+```
 
 ## Scripts
 
- - **npm run readme** : `node ./node_modules/node-readme/bin/node-readme.js`
+ - **npm run readme** : `node ./node_modules/.bin/node-readme`
  - **npm run test** : `find ./spec -iname '*.spec.js' -exec ./node_modules/.bin/babel-node {} \; | ./node_modules/.bin/tap-spec`
  - **npm run zuul** : `./node_modules/zuul/bin/zuul -- spec/**/*.spec.js`
  - **npm run build** : `babel -d ./dist ./src`
